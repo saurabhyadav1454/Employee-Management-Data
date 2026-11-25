@@ -1,0 +1,193 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5f9;
+  color: #202938;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+.app-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.app-header {
+  background: #243b63;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.app-header h1 {
+  margin: 0 0 8px;
+}
+
+.app-header p {
+  margin: 0;
+  color: #dbe4f2;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card, .form-card, .list-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.stat-card p {
+  color: #64748b;
+}
+
+.stat-card h2 {
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.form-card, .list-card {
+  margin-bottom: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d5dbe5;
+  border-radius: 7px;
+  background: white;
+}
+
+input:focus, select:focus {
+  outline: 2px solid #93b4ef;
+  border-color: #477bd0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+button {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: #2864c5;
+  color: white;
+}
+
+.secondary-btn {
+  background: #e7ebf1;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+th, td {
+  text-align: left;
+  padding: 14px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+th {
+  background: #f7f9fc;
+}
+
+.department-badge {
+  background: #eaf1ff;
+  color: #2457a6;
+  padding: 5px 9px;
+  border-radius: 20px;
+}
+
+.edit-btn {
+  background: #e6efff;
+  color: #2457a6;
+  margin-right: 7px;
+}
+
+.delete-btn {
+  background: #ffe9e9;
+  color: #c62828;
+}
+
+.error {
+  color: #c62828;
+}
+
+.empty-message {
+  text-align: center;
+  color: #64748b;
+}
+
+.record-count {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .dashboard, .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
